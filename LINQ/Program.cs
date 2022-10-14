@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<String> videoGames = new List<String>
+            {"Minecraft", "Fifa", "Fortnite", "Halo", "Overwatch" };
+
+            IEnumerable<String> videoGameNames = videoGames.OrderBy(x => x.Length);
+              
+            foreach(String game in videoGameNames)
+            {
+                Console.WriteLine(game);
+            }
         }
     }
 }
